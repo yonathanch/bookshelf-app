@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="rgba(233, 61, 107, .7)" />
+  
+  <title>Bookself Apps</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="welcome-content">
+      <div class="welcome-text">
+        <h1>Selamat Datang di Bookshelf Apps</h1>
+        <p>Bookshelf adalah sebuah rak atau tempat untuk menyimpan dan menata buku.Merujuk pada aplikasi atau platform 
+          digital yang memungkinkan pengguna untuk menyusun dan mengelola koleksi buku mereka secara elektronik. 
+          Bookshelf sering kali terdiri dari rak-rak horisontal yang disusun secara vertikal, memberikan ruang untuk 
+          menyimpan berbagai buku.
+        </p>
+      </div>
+      <div class="welcome-image">
+        <img src="./assets/img/paper.jpg" alt="">
+      </div>
+    </div>
+  </header>
+ 
+  
+  <div class="container">
+    <h1>Bookself Apps</h1>
+    <p>Aplikasi Pengelola Buku</p>
+    <div class="content">
+      
+      <div class="column-1">
+        <div class="my-container welcome">
+          <h1>Keterangan</h1>
+        </div>
+        <div class="content-book">
+          <div class="unread" id="unread">
+            <h3>Belum selesai Dibaca</h>
+          </div>
+          <div class="read" id="read">
+            <h3>Selesai Dibaca</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="column-2">
+        <div class="user-information my-container">
+          <ul>
+            <li>
+              <h2>Jumlah Buku</p>
+              <h4 id="jumlahBuku">15</h4>
+            </li>
+          </ul>
+        </div>
+        <div class="my-container icons">
+          <div class="my-icon">
+            <div class="add-book" id="add-book">
+            <img src="./assets/icons/plus-solid.svg" alt="add-book">
+          </div>
+          <h5>Tambah Buku</h5>
+        </div>
+
+          <div class="my-icon">
+            <div class="unread-icon">
+              <img src="./assets/icons/book-solid.svg" alt="unread-book">
+            </div>
+            <h5>Belum Dibaca</h5>
+          </div>
+
+          <div class="my-icon">
+            <div class="read-icon">
+              <img src="./assets/icons/readme.svg" alt="read-book">
+            </div>
+            <h5>Dibaca</h5>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+</div>
+
+
+    <div id="modal">
+        <section class="my-container">
+            <h2>Tambah Buku Baru</h2>
+            <form id="form">
+                <div class="input-group">
+                    <input type="text" id="title" placeholder="Judul Buku" class="input-form"
+                        maxlength="120" pattern="^[a-zA-Z0-9_ ]*$" required />
+                </div>
+                <div class="input-group">
+                    <input type="text" id="author" placeholder="Author" class="input-form"
+                        maxlength="60" pattern="^[a-zA-Z0-9_ ]*$" required />
+                </div>
+                <div class="input-group">
+                    <input type="date" id="year" 
+                        class="input-form" min="1900" max="2026" />
+                </div>
+                <div class="button-group">
+                    <button type="reset" class="close" id="close">Close</button>
+                    <button type="submit" id="save">Save</button>
+                </div>
+            </form>
+        </section>
+    </div>
+  
+
+  <script src="./storage.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
